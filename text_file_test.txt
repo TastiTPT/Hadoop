@@ -1,5 +1,5 @@
-ceci est un test de mapReduce
-le compte doit donner un compte de trente
-si le compte est bien de trente
-alors le test est bon
-ceci termine le test
+Ceci est un test de mapReduce.
+Le compte doit donner un compte de trente.
+Si le compte est bien de trente,
+alors le test est bon!
+Ceci termine le test.

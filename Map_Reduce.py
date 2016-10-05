@@ -15,7 +15,7 @@ def map(line): # Take a line in input
     words = line.split(" ") # split line by word
     for word in words:
         for w in to_withdraw: # loop to withdraw all punctuation
-            word = word.rstrip(w).lstrip(w).lower() # lower to avoid cast
+            word = word.replace(w,"").lower() # lower to avoid cast
         key_value = dict()  # initialisation of a new dictionnary
         key_value[word] = 1 # map value 1 to key word
         group.append(key_value) # add the pair of (key and its value) to the group
@@ -29,7 +29,7 @@ def reduce(dic): # take a dictionnary in input
     
 # test map #
 print("Test map: ")
-test_1 = "Map function test!"
+test_1 = "Map function test."
 print("the sentence for the test is: "+str(test_1))
 print(map(test_1))
 print("\n")
@@ -84,12 +84,16 @@ def count(text_file): # the main function to do all the algorithm
     print("$$$ map Step $$$")
     print("\n")
     for line in lines:
+        print("line to map: ")
+        print(line)
         group = map(line)
         print("a group after map step:")
         print(group)
-        print("\n")
         groups.append(group)
+        print("\n")
+        print("\n")
     print("\n")
+    
     
     # sort and shuffle step
     print("$$$ Sort and Shuffle Step $$$")
